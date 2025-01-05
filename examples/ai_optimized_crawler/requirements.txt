@@ -1,0 +1,4 @@
+```text
+firecrawl==0.0.1 # all libraries are most up to date as of 2025-01-01
+pydantic==2.5.2
+```
