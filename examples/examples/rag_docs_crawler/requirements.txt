@@ -1,0 +1,4 @@
+firecrawl==0.0.1 # all libraries are most up to date as of 2025-01-01
+langchain==0.3.13
+chromadb==0.4.24
+openai==1.12.0
