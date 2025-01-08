@@ -1,0 +1,6 @@
+firecrawl-py
+swarms
+openai
+anthropic
+pydantic
+python-dotenv
