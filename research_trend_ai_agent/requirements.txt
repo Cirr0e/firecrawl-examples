@@ -6,4 +6,3 @@ streamlit
 python-dotenv
 pyyaml
 crewai
-```
