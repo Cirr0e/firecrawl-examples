@@ -1,0 +1,9 @@
+firecrawl-py
+langchain
+openai
+anthropic
+streamlit
+python-dotenv
+pyyaml
+crewai
+```

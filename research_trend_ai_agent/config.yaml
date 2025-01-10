@@ -1,0 +1,18 @@
+research:
+  sources:
+    - "https://www.wired.com"
+    - "https://techcrunch.com"
+    - "https://venturebeat.com"
+  max_crawl_depth: 2
+  output_format: "markdown"
+
+ai_models:
+  provider: "openai"
+  model: "gpt-4o"
+  temperature: 0.7
+
+report_sections:
+  - "Technology Overview"
+  - "Market Trends"
+  - "Key Players"
+  - "Future Predictions"
