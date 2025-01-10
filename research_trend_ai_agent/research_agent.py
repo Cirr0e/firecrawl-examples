@@ -26,8 +26,8 @@ class ResearchTrendAgent:
             crawl_result = self.firecrawl_app.crawl_url(
                 source, 
                 params={
-                    'max_depth': config['research']['max_depth'],
-                    'format': 'markdown'
+                    'maxDepth': config['research']['max_crawl_depth'],
+                    'scrapeOptions': {'formats': [config['research']['output_format']]}
                 }
             )
             results.extend(crawl_result.get('data', []))
