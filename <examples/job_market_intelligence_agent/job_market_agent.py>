@@ -1,0 +1,16 @@
+@@ -21,7 +21,13 @@
+         for location in locations:
+             query = f"{job_title} jobs in {location}"
+             scraped_data = self.firecrawl.crawl(
+-                # Construct a Google search URL by:\n
++                # URL Construction Strategy:\n
++                # Purpose: Generate a targeted Google search URL for job listings\n
++                # Components of URL construction:\n
+                 # 1. Combining job title and location into a search query\n
++                #    Example: "Data Scientist jobs in New York"\n
+                 # 2. Replacing spaces with '+' to create a valid URL-encoded search term\n
++                #    This ensures the search query is properly formatted for Google search\n
+                 urls=[f"https://www.google.com/search?q={query.replace(' ', '+')}"],
+                 params={
+                     "extractors": {
+</examples/job_market_intelligence_agent/job_market_agent.py>
