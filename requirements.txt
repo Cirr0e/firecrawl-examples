@@ -1,0 +1,6 @@
+```
+firecrawl-py==1.9.0
+crewai==0.95.0
+pydantic==2.6.4
+asyncio
+```
