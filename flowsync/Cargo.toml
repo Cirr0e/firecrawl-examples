@@ -1,0 +1,26 @@
+[package]
+name = "flowsync_core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Encryption
+ring = "0.16.20"
+base64 = "0.21.2"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# AI Integration
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1.28", features = ["full"] }
+
+# Local Storage
+rusqlite = "0.29.0"
+
+# Async Runtime
+futures = "0.3"
+
+[dev-dependencies]
+mockall = "0.11.3"

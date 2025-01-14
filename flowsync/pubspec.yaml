@@ -1,0 +1,57 @@
+name: flowsync
+description: AI-Powered Collaborative Workspace
+
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+  flutter: ^3.13.0
+
+dependencies:
+  # Flutter Core
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.4.0
+  go_router: ^10.1.2
+
+  # State Management
+  provider: ^6.0.5
+  freezed_annotation: ^2.2.0
+
+  # Networking
+  dio: ^5.3.2
+  web_socket_channel: ^2.4.0
+
+  # Local Storage
+  sqflite: ^2.3.0
+  path_provider: ^2.1.1
+
+  # Security
+  encrypt: ^5.0.1
+  pointycastle: ^3.7.3
+
+  # AI Integration
+  openai: ^2.0.0
+
+  # Utilities
+  uuid: ^3.0.7
+  logging: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  # Code Generation
+  build_runner: ^2.4.6
+  freezed: ^2.4.1
+  json_serializable: ^6.7.1
+
+  # Static Analysis
+  flutter_lints: ^2.0.3
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
