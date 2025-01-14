@@ -1,0 +1,6 @@
+firecrawl-py
+openai
+python-dotenv
+tiktoken
+PyYAML
+validators
