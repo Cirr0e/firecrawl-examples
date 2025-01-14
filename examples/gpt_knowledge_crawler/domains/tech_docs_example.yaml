@@ -1,0 +1,16 @@
+domain:
+  base_url: https://python.langchain.com/v0.2/docs/introduction/
+  allowed_paths:
+    - /docs
+  exclude_paths:
+    - /blog
+    - /archive
+
+extraction:
+  max_pages: 50
+  max_tokens: 4000
+  chunk_strategy: semantic
+
+output:
+  format: json
+  filename: langchain_knowledge_base.json
