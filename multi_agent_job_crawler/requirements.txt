@@ -1,0 +1,8 @@
+firecrawl-py
+openai
+anthropic
+python-dotenv
+pandas
+numpy
+scikit-learn
+matplotlib
