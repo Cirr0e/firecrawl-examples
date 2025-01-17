@@ -1,0 +1,23 @@
+crawler:
+  update_interval: 3600  # seconds
+  base_url: "https://kafka.apache.org/documentation/"
+  include_paths:
+    - "/documentation/*"
+    - "/apis/*"
+  exclude_paths:
+    - "/downloads/*"
+    - "/community/*"
+
+kafka:
+  topic: "kafka_docs_updates"
+  partitions: 3
+  replicas: 3
+  bootstrap_servers: "localhost:9092"
+
+firecrawl:
+  formats:
+    - "markdown"
+    - "html"
+  max_depth: 5
+  allow_external_links: false
+  timeout: 30000  # milliseconds
