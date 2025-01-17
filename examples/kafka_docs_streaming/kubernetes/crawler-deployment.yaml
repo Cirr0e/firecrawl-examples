@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docs-crawler
+  labels:
+    app: docs-crawler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docs-crawler
+  template:
+    metadata:
+      labels:
+        app: docs-crawler
+    spec:
+      containers:
+      - name: docs-crawler
+        image: docs-crawler:latest
+        env:
+        - name: FIRECRAWL_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: firecrawl-secret
+              key: api-key
+        - name: KAFKA_BOOTSTRAP_SERVERS
+          value: "kafka-docs-cluster-kafka-bootstrap:9092"
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "500m"
+          limits:
+            memory: "512Mi"
+            cpu: "1000m"
+        volumeMounts:
+        - name: config-volume
+          mountPath: /app/config
+      volumes:
+      - name: config-volume
+        configMap:
+          name: crawler-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: crawler-config
+data:
+  config.yaml: |
+    crawler:
+      update_interval: 3600
+      base_url: "https://kafka.apache.org/documentation/"
+      include_paths:
+        - "/documentation/*"
+        - "/apis/*"
+      exclude_paths:
+        - "/downloads/*"
+        - "/community/*"
+    kafka:
+      topic: "kafka_docs_updates"
+      partitions: 3
+      replicas: 3
