@@ -1,0 +1,15 @@
+# Core Dependencies
+firecrawl-py==1.9.0
+requests==2.31.0
+python-dotenv==1.0.0
+
+# Data Processing
+pandas==2.1.4
+textblob==0.17.1
+
+# Optional: Advanced NLP
+spacy==3.7.4
+nltk==3.8.1
+
+# Testing
+pytest==7.4.4
